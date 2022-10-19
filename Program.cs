@@ -30,4 +30,30 @@ while (retry == "yes")
     food = Console.ReadLine();
 
     Console.WriteLine($"The {adj} day was a hard day for {fictionalCreature}, {heOrshe} got up to go to a {specialEvent} at the {location} but {heOrshe} had to go and get {food}. Walking down the side walk {heOrshe} had seen their favorite {noun} in their favorite {color}. Continuing on {heOrshe} made it down to the {adjTwo} resturant they {adverb} inside and grabbed the food. {heOrshe} made it to the {specialEvent} and was happy The End. ");
+
+    Console.Write("Would you like to try again? Type in Yes to retry or No to quit: ");
+
+    string playAgainInput = "";
+    while (playAgainInput != "yes" || playAgainInput != "no")
+    {
+        playAgainInput = Console.ReadLine().ToLower();
+        if (playAgainInput == retry)
+        {
+            break;
+        }
+        else if (playAgainInput == "no")
+        {
+            Console.WriteLine("Thanks for playing!");
+            retry = playAgainInput;
+            break;
+            
+        }
+        else
+        {
+            Console.WriteLine("Invalid Input");
+            playAgainInput = "invalid";
+        }
+
+
+    }
 }
